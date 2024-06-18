@@ -22,6 +22,8 @@ Atmospheric light and the transmission map are computed using concepts similar t
 * At least part of the image should show the sky.
 * Useful for daytime, but not for nighttime.
 
+### Results
+![lmao](https://github.com/Harish-Balaji-B/Image-Dehazing/blob/main/Sample/dcp_morphology.png)<br>
 
 ## Colour attenuation prior using Haze lines prior
 This algorithm is mixture of CAP and Haze line prior algorithms. 
@@ -50,6 +52,8 @@ After finding scene depth,scaterring coefficient and estimating the airlight, we
 * Impact on Computational Resources
 * Difficulty in Handling Non-uniform Illumination
 
+### Result
+![lmao](https://github.com/Harish-Balaji-B/Image-Dehazing/blob/main/Sample/cap_hlp.png)<br>
 
 ## CLAHE Algorithm 
 This algorithm defines two functions, clahe and clahe2, which can be used to apply the Contrast Limited Adaptive Histogram Equalization (CLAHE) algorithm to an image. 
@@ -58,8 +62,14 @@ The clahe function takes two parameters:
 * image: The input image, which should be a 2D array. 
 * clipping_limit: A float value that sets the limit for contrast enhancement. Higher values allow for more contrast enhancement, but can also amplify noise in the image. The default value is 2.0. grid_size: A tuple that sets the size of the contextual regions, which are the small regions of the image that the algorithm adjusts the contrast of separately. The default value is (8, 8).
 
+### Result
+![lmao](https://github.com/Harish-Balaji-B/Image-Dehazing/blob/main/Sample/clahe.png)<br>
+
 ## Metric Analysis
 For metric analysis of our code, we took 2 mothods:
 * PSNR (Peak Signal-to-Noise Ratio)
 * SSIM (Structural Similarity Index)
 Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index (SSIM) are metrics commonly used to evaluate the quality of images. Both metrics provide quantitative measures to assess how well a processed or compressed image compares to the original, with higher values indicating better quality.
+
+### Result
+![lmao](https://github.com/Harish-Balaji-B/Image-Dehazing/blob/main/Sample/metric.png)<br>
