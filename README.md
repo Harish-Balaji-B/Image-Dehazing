@@ -10,7 +10,7 @@ This algorithm has three main objectives:
 * Refine the transmission map 
 Atmospheric light and the transmission map are computed using concepts similar to Dark Channel Prior. But to refine the transmission map, we used the concepts of morphology.
 
-<strong>Refining the transmission map: </strong><br>
+### Refining the transmission map:
 * Perform closing operation on initial transmission map and reconstruct the image. This operation removes the small dark elements from the image. 
 * Perform opening reconstruction on the transmission map. This operation removes small objects which are smaller than structuring element. On doing the this some small useful data might be lost in order to save it we store the removed objects. 
 * Recover ranges from original image and add the removed small objects in order to get the refined transmission map 
@@ -36,10 +36,10 @@ In order to find the scene depth we use CAP algorithm. This algorithm states tha
 
 Hence the scene depth of the image will be linearly dependent on the difference between brightness and saturation in the image. Using this we estimate the scene depth. 
 
-<strong>How to find scattering coefficient: </strong><br>
+### How to find scattering coefficient: 
 In general scattering coefficient is kept constant as in most of the images the haze is evenly spread. But in case of satellite images the haze is inconsistent and unevenly spread. So the scattering coefficient must keep changing. Scattering coefficient directly depends on scene depth. Hence with an increase in scene depth, scatering coefficient increases exponentially. 
 
-<strong>How to find airlight: </strong>
+### How to find airlight:
 In order to estimate the airLight we use Haze lines Prior. In this algorithm, we map the pixels in the image to RGB colorspace. Then the model takes these pixels as lines and these lines converge at a point. This point is airLight. Then we use a feature extraction model in order to find the origin point for this airLight. 
 After finding scene depth,scaterring coefficient and estimating the airlight, we send these values to ASM model in order to get the dehazed image.
 
